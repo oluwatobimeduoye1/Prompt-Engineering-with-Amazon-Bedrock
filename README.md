@@ -15,7 +15,8 @@ Al.
 - A Studio notebook provides the ideal place to test and experiment, helping data scientists and developers build, train, and deploy machine learning (ML) models.
 - Studio notebook is fully managed, comes with pre-installed ML frameworks and libraries, is integrated with AWS services, and provides collaboration features for teams working on Al projects.
 
-<img width="904" height="532" alt="Screenshot 2025-10-07 at 22 33 16" src="https://github.com/user-attachments/assets/f2fc55e2-2d0a-4872-a61a-c4112cd4b43b" />
+<img width="904" height="532" alt="Screenshot 2025-10-07 at 22 33 16" src="https://github.com/user-attachments/assets/425907d3-3be0-46ff-925a-b1f3fc704bb3" />
+
 
 
 ### AWS Services Used
@@ -78,10 +79,12 @@ A **media and entertainment company** uses the app to:
 ## Technical Implementation Steps (Summary)
 
 1. **Enable Model Access** in Amazon Bedrock (e.g., *Nova Pro* model).  
-<img width="1179" height="417" alt="Screenshot 2025-10-07 at 22 48 51" src="https://github.com/user-attachments/assets/4819c519-8fb9-45f9-b4ef-e7d17139924b" />
+<img width="1179" height="417" alt="Screenshot 2025-10-07 at 22 48 51" src="https://github.com/user-attachments/assets/d9fb002b-b73d-4f25-b741-91a3a0390c1d" />
+
 
 2. Experiment in **Bedrock Playground** to create system prompts.         
-<img width="1466" height="730" alt="Screenshot 2025-10-07 at 22 52 45" src="https://github.com/user-attachments/assets/c9ef257e-098d-43c6-8423-9ec615697ec4" />
+<img width="1466" height="730" alt="Screenshot 2025-10-07 at 22 52 45" src="https://github.com/user-attachments/assets/02bef0b1-cb57-493e-b803-47c322b5aee8" />
+
 Using the Amazon Bedrock playground, you can experiment with various FMs without having to write any code.  ( we can create system prompts and also prompt the FM ) 
 
 3. Open **SageMaker Studio** and run the Jupyter notebook to test prompt variations. 
@@ -92,7 +95,8 @@ model building to training, debugging, deployment, and monitoring.
    ```bash
    zip lambda_function.zip lambda_function.py
    aws lambda update-function-code --function-name invoke_bedrock --zip-file fileb://lambda_function.zip
-<img width="1414" height="688" alt="Screenshot 2025-10-07 at 23 30 32" src="https://github.com/user-attachments/assets/b2e77d21-127b-4f4b-a0f3-a9d030a14a3f" />
+<img width="1414" height="688" alt="Screenshot 2025-10-07 at 23 30 32" src="https://github.com/user-attachments/assets/e4b670b2-c3b6-4699-a728-a4ef59eac63a" />
+
 
     Replace API endpoint in index.html:
 
@@ -104,8 +108,10 @@ WEB_BUCKET=$(aws s3 ls | grep www- | awk '{ print $3 }')
 aws s3 cp index.html s3://$WEB_BUCKET/
 
 Access the deployed web app via the CloudFront distribution domain.
-<img width="1351" height="777" alt="Prompt Engineering with Amazon Bedrock" src="https://github.com/user-attachments/assets/b805f012-7ae6-4db9-9324-7171e88661c1" />
-<img width="1470" height="956" alt="Prompt Engineering with Amazon Bedrock" src="https://github.com/user-attachments/assets/857c4f84-bd3c-450d-bbfe-74a3d93b944b" />
+<img width="1351" height="777" alt="Prompt Engineering with Amazon Bedrock" src="https://github.com/user-attachments/assets/40463a9e-50e8-45a5-b652-c8cfcd491e41" />
+
+<img width="1470" height="956" alt="Prompt Engineering with Amazon Bedrock" src="https://github.com/user-attachments/assets/3d1004a9-7c50-4949-a7f3-46555e43154b" />
+
 
 
 Key Outcomes
